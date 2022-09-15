@@ -1,16 +1,58 @@
-<!DOCTYPE html>
 <!--
 To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
-<html>
-    <head>
-        <title>TODO supply a title</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
-    <body>
-        <div>TODO write content</div>
-    </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <script src="calculate.js"></script>
+    <title>Currency Converter</title>
+</head>
+<body>
+    <div id="current_date" class="current_time"></div>
+    <h1>Currency Converter</h1>
+    <div class="main">
+        <div class="container">
+            <table class="menu_table">
+                <tbody>
+                    <tr>
+                        <td class="td_label">Currency On Hand</td>
+                        <td class="td_label">Convert To</td>
+                    </tr>
+                    <tr>
+                        <td class="td_input"><select id="currency_on_hand">
+                            <option value="">Select</option>
+                            <option value="Euro">Euro</option>
+                            <option value="US_Dollar">US Dollar</option>
+                            <option value="Canadian_Dollar">Canadian Dollar</option>
+                            <option value="Bitcoin">Bitcoin Digital Currency</option>
+                            <option value="Ethereum">Ethereum Digital Currency</option></select>
+                        </td>
+                        <td class="td_input"><select id="convert_currency">
+                            <option value="">Select</option>
+                            <option value="Euro">Euro</option>
+                            <option value="US_Dollar">US Dollar</option>
+                            <option value="Canadian_Dollar">Canadian Dollar</option>
+                            <option value="Bitcoin">Bitcoin Digital Currency</option>
+                            <option value="Ethereum">Ethereum Digital Currency</option></select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="td_label">Amount</td>
+                        <td class="td_label">Conversion Value</td>
+                    </tr>
+                    <tr>
+                        <td class="td_input"><input type="number" id="amount" value="0" min="0" onchange="convertCurrency(this.value)"></td>
+                        <td class="td_input"><input type="number" id="conversion_amount" value="0" min="0"></td>
+                    </tr>
+            </table>
+        </div>
+    </div>
+</body>
 </html>
