@@ -5,7 +5,7 @@
  */
 
 /*
- * Currency based on Feb. 2022
+ * Currency based on 17 Sep. 2022
  */
 
 function convertCurrency(val) {
@@ -21,15 +21,11 @@ function convertToUSDollar(val)    {
     val=parseFloat(val);
 
     if(currency_on_hand === "Euro") 
-        conversion_result_in_USD = val * 1.09;
+        conversion_result_in_USD = val * 1.00 ;
     else if(currency_on_hand === "US_Dollar")
         conversion_result_in_USD = val * 1.00;        
     else if(currency_on_hand === "Canadian_Dollar")
-        conversion_result_in_USD = val * 0.79;
-    else if(currency_on_hand === "Bitcoin")
-        conversion_result_in_USD = val * 39020.70;
-    else if(currency_on_hand === "Ethereum")
-        conversion_result_in_USD = val * 2638.50;
+        conversion_result_in_USD = val * 0.75;
 
     return conversion_result_in_USD;
 }
@@ -40,15 +36,11 @@ function convertFromUSDollar(val)    {
     val=parseFloat(val);
 
     if(convert_currency === "Euro") 
-        conversion_result = val * 0.91;
+        conversion_result = val * 1.00;
     else if(convert_currency === "US_Dollar")
         conversion_result = val * 1.00;        
     else if(convert_currency === "Canadian_Dollar")
-        conversion_result = val * 1.27;
-    else if(convert_currency === "Bitcoin")
-        conversion_result = val * 0.000026;
-    else if(convert_currency === "Ethereum")
-        conversion_result = val * 0.00038;
+        conversion_result = val * 1.33;
 
     return conversion_result;
 }
